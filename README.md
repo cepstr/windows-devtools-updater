@@ -1,4 +1,4 @@
-\# Windows Developer Tools Updater
+﻿# Windows Developer Tools Updater
 
 
 
@@ -6,37 +6,37 @@ A PowerShell 5.1 script that automatically checks for and installs updates to co
 
 
 
-\## Supported Tools
+## Supported Tools
 
 
 
-\- Laravel Installer — Composer global package
+- Laravel Installer â€” Composer global package
 
-\- GitHub CLI — Windows Package Manager (WinGet)
+- GitHub CLI â€” Windows Package Manager (WinGet)
 
-\- PHP Installer for Extensions (PIE) — verified GitHub releases
+- PHP Installer for Extensions (PIE) â€” verified GitHub releases
 
-\- Node.js — latest LTS release using fnm
+- Node.js â€” latest LTS release using fnm
 
-\- npm — latest stable release
-
-
-
-\## Requirements
+- npm â€” latest stable release
 
 
 
-\- Windows with PowerShell 5.1
+## Requirements
 
-\- Composer and Laravel Installer
 
-\- WinGet
 
-\- GitHub CLI
+- Windows with PowerShell 5.1
 
-\- fnm (Fast Node Manager)
+- Composer and Laravel Installer
 
-\- PIE installed at `C:\\tools\\pie.exe`
+- WinGet
+
+- GitHub CLI
+
+- fnm (Fast Node Manager)
+
+- PIE installed at `C:\tools\pie.exe`
 
 
 
@@ -44,7 +44,7 @@ Missing tools are skipped where supported.
 
 
 
-\## Usage
+## Usage
 
 
 
@@ -54,7 +54,7 @@ Run the updater using PowerShell:
 
 ```powershell
 
-.\\Update-DevTools.ps1
+.\Update-DevTools.ps1
 
 ```
 
@@ -64,7 +64,7 @@ The script is designed to run as a regular user. It can also be automated throug
 
 
 
-\## Logging
+## Logging
 
 
 
@@ -72,7 +72,7 @@ The latest execution log is saved at:
 
 
 
-`%LOCALAPPDATA%\\DevToolsUpdater\\updates.log`
+`%LOCALAPPDATA%\DevToolsUpdater\updates.log`
 
 
 
@@ -80,19 +80,19 @@ The log is cleared at the beginning of each run.
 
 
 
-\## Notes
+## Notes
 
 
 
-\- Composer itself is updated separately with administrator privileges.
+- Composer itself is updated separately with administrator privileges.
 
-\- PHP, Xdebug, and project dependencies are not updated.
+- PHP, Xdebug, and project dependencies are not updated.
 
-\- Some package updates may require administrator privileges depending on installation settings.
+- Some package updates may require administrator privileges depending on installation settings.
 
-\- The PIE replacement and rollback workflow has not yet been fully tested.
+- The PIE replacement and rollback workflow has not yet been fully tested.
 
-\- Individual update failures are logged but may not cause the overall script to exit with an error code.
+- Individual update failures are logged but may not cause the overall script to exit with an error code.
 
 
 
@@ -139,9 +139,10 @@ Task Scheduler configurations are not included in this repository.
 
 
 
-\## License
+## License
 
 
 
 MIT License.
+
 
