@@ -96,6 +96,49 @@ The log is cleared at the beginning of each run.
 
 
 
+
+## Composer Self-Update
+
+The repository also includes `Update-Composer.ps1`, a separate PowerShell script for updating Composer itself.
+
+Unlike the main developer-tools updater, this script requires administrator privileges because Composer is installed system-wide.
+
+### Requirements
+
+- Windows PowerShell 5.1
+- Administrator privileges
+- Composer installed at `C:\ProgramData\ComposerSetup\bin\composer.bat`
+
+### Usage
+
+Open PowerShell as Administrator and run:
+
+```powershell
+.\Update-Composer.ps1
+```
+
+The script updates Composer to the latest stable release, verifies the installed version, and logs the results.
+
+### Logging
+
+The latest Composer update log is saved at:
+
+`C:\ProgramData\DevToolsUpdater\composer.log`
+
+The log is overwritten at the beginning of each run.
+
+### Automation
+
+Both scripts can be automated using Windows Task Scheduler.
+
+The Composer updater should run as an administrator, while the main developer-tools updater can run as a regular user.
+
+Before scheduling an elevated script, ensure its file, directory, and executable dependencies cannot be modified by unprivileged users.
+
+Task Scheduler configurations are not included in this repository.
+
+
+
 \## License
 
 
